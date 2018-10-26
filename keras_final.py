@@ -10,10 +10,9 @@ from sklearn.preprocessing import StandardScaler
 
 
 def create_baseline():
-def create_baseline():
     model = Sequential()
-    model.add(Dense(60, activation='relu', kernel_initializer='normal', input_dim=8))
-    model.add(Dense(1, activation='sigmoid', kernel_initializer='normal'))
+    model.add(Dense(60, activation='relu', kernel_initializer='random_uniform', input_dim=8))
+    model.add(Dense(1, activation='sigmoid', kernel_initializer='random_uniform'))
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     return model
 
